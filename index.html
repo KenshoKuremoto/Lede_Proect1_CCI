@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Too Flawed to Save, or Too Hasty to Scrap?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-size: 18px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-rendering: optimizeLegibility;
+    }
+    .content {
+      max-width: 640px;
+      margin: auto;
+      padding: 2em;
+    }
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    .subhead {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      margin-bottom: 1em;
+    }
+    .byline {
+      font-size: 0.9em;
+      margin-bottom: 2em;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.2em;
+    }
+    h2 {
+      margin-top: 2em;
+      font-size: 1.5em;
+    }
+    .scrolly-container {
+      position: relative;
+      margin-bottom: 3em;
+    }
+    .sticky-thing {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+    }
+    .steps-container {
+      position: relative;
+      z-index: 10;
+      max-width: 35rem;
+      margin: 0 auto;
+      padding: 2em 1em;
+    }
+    .step {
+      background: #ffa880cc;
+      padding: 1em;
+      margin-bottom: 50vh;
+      font-size: 1em;
+    }
+    iframe, .flourish-embed {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    img.responsive {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+      .step {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+</head>
+<body>
+  <div class="content">
+    <h1>Too Flawed to Save, or Too Hasty to Scrap?</h1>
+    <p class="subhead">Why Japan Killed Its 70-Year-Old Rice Index — and Whether the Numbers Justified It</p>
+    <p class="byline">By Kensho Kuremoto</p>
+    <p><strong>Here is the link to Github page</strong> – <a href="https://github.com/KenshoKuremoto/example_repo" target="_blank">https://github.com/KenshoKuremoto/example_repo</a></p>
+
+    <p>Japan is currently facing a serious problem: a surge in the price of its staple food—rice.</p>
+  </div>
+
+  <!-- Section 1 -->
+  <section class="scrolly-container">
+    <div class="sticky-thing">
+      <iframe src="https://datawrapper.dwcdn.net/iZVPG/1/" title="CPI for rice"></iframe>
+    </div>
+    <div class="steps-container">
+      <div class="step">Over the past 35 years, the Consumer Price Index (CPI) for rice has skyrocketed since 2024, far outpacing other items, and shows no sign of slowing down in 2025.</div>
+      <div class="step">The last major rice price crisis occurred in 1993, which became a national scandal. But today’s CPI has reached nearly double the level of that event.</div>
+    </div>
+  </section>
+
+  <div class="content">
+    <h2>A Mysterious Rice Crisis — and a Political Prince on a Mission</h2>
+    <p>Unlike the 1993 crisis—caused by a clearly identified poor harvest due to an unusually cold summer—this time, the cause of the soaring rice prices remains unclear. Some speculate that wholesalers are hoarding rice; others suggest that government statistics on rice harvests may be flawed.</p>
+  </div>
+
+  <!-- Section 2 -->
+  <section class="scrolly-container">
+    <div class="sticky-thing">
+      <img src="shinjiro.jpeg" alt="Shinjiro Koizumi with farmers" class="responsive">
+    </div>
+    <div class="steps-container">
+      <div class="step">To tackle the crisis, the government appointed Shinjiro Koizumi as Minister of Agriculture—a move that shocked many.</div>
+    </div>
+  </section>
+
+  <div class="content">
+    <p>Koizumi quickly implemented an emergency policy of releasing government rice stockpiles directly to retailers at discounted prices. [...] But was the index truly useless? Let’s take a look at the actual data.</p>
+    <h2>A Broken Yardstick? What Data Say About the Rice Index</h2>
+    <p>The controversy erupted when, despite the ongoing rice crisis, the CCI for 2024 was reported at 101—essentially average. To investigate further, we examined the relationship between the CCI and actual harvest volumes over the past 35 years.</p>
+  </div>
+
+  <!-- Section 3 -->
+  <section class="scrolly-container">
+    <div class="sticky-thing">
+      <div class="flourish-embed flourish-chart" data-src="visualisation/23904680"></div>
+    </div>
+    <div class="steps-container">
+      <div class="step">The red line traces Japan’s official Crop Condition Index. While it fluctuated noticeably during the volatile 1990s, the index has appeared more stable since the mid-2000s.</div>
+      <div class="step">In contrast, the blue bars represent harvest volumes. Up until around 2006, the two metrics seemed to move in tandem — a lower index often aligned with smaller harvests, and vice versa. But after that point, the relationship begins to break down.</div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="scrolly-container">
+    <div class="sticky-thing">
+      <div class="flourish-embed flourish-scatter" data-src="visualisation/23905830"></div>
+    </div>
+    <div class="steps-container">
+      <div class="step">The bubble chart below plots the CCI (X-axis) against the rice CPI (Y-axis), with the size and color of each bubble representing harvest volume.</div>
+      <div class="step">Excluding the extreme values from 1993 and 1994, we find no clear correlation between the crop index and rice prices. If the index were meaningful, the bubbles would form a discernible trend—but they do not.</div>
+      <div class="step">Moreover, the 2024 CPI reached 123, while the CCI remained at 101—very similar to years with no pricing spike. This stark contrast implies that the index failed to align with price realities and, by extension, consumer experience.</div>
+    </div>
+  </section>
+</body>
+</html>
