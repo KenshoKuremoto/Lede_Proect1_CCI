@@ -2,133 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Too Flawed to Save, or Too Hasty to Scrap?</title>
-  <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/scrollama">
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: Georgia, 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
-      padding: 1em;
     }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 2rem;
+    }
+
     h1 {
       font-size: 2em;
-      font-weight: bold;
-      font-style: italic;
     }
+
     h2 {
-      font-size: 1.5em;
-      font-weight: 600;
-      font-style: italic;
+      font-size: 1.2em;
       margin-top: 2em;
     }
+
+    b {
+      font-weight: bold;
+    }
+
+    .graphic-container {
+      position: relative;
+      height: 80vh;
+      margin-bottom: 3em;
+    }
+
+    .graphic-container img,
+    .graphic-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .step {
+      margin: 0 auto;
+      padding: 80vh 0;
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+
+    .step p {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
     .scrolly {
       position: relative;
-      margin: 2em 0;
     }
+
+    .scroll-text {
+      position: relative;
+      z-index: 10;
+      max-width: 700px;
+      margin: auto;
+    }
+
     .sticky-graphic {
       position: sticky;
       top: 0;
-      z-index: 0;
-      text-align: center;
+      height: 100vh;
     }
-    .step {
-      background: #f0f0f0;
-      margin: 2em 0;
-      padding: 1em;
-      border-radius: 10px;
-    }
-    img, iframe {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: auto;
-    }
+
     .footer {
-      margin-top: 4em;
-      padding: 2em 0;
-      border-top: 1px solid #ccc;
+      background: #f4f4f4;
       text-align: center;
       font-size: 0.9em;
+      margin-top: 4em;
+      padding: 2em 0;
     }
-    strong {
-      font-weight: 600;
+
+    .footer a {
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>Too Flawed to Save, or Too Hasty to Scrap?</h1>
-  <h2>Why Japan Killed Its 70-Year-Old Rice Index — and Whether the Numbers Justified It</h2>
-  <p><strong>Japan is currently facing a serious problem:</strong> a <strong>surge in the price of its staple food—rice.</strong></p>
-  <p>Over the past 35 years, the Consumer Price Index (CPI) for rice has skyrocketed like a rocket since 2024, far outpacing other items, and shows no sign of slowing down in 2025.</p>
+  <div class="container">
+    <h1>Too Flawed to Save, or Too Hasty to Scrap?</h1>
+    <h2 style="font-size: 1.3em;">Why Japan Killed Its 70-Year-Old Rice Index — and Whether the Numbers Justified It</h2>
+
+    <p>Japan is currently facing a serious problem: <b>a surge in the price of its staple food—rice.</b> Over the past 35 years, the Consumer Price Index (CPI) for rice has skyrocketed like a rocket since 2024, far outpacing other items, and shows no sign of slowing down in 2025.</p>
+
+    <iframe title="The Consumer Price Index over the past 35 years" aria-label="Interactive line chart" id="datawrapper-chart-iZVPG" src="https://datawrapper.dwcdn.net/iZVPG/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="568" data-external="1"></iframe>
+
+    <p>The last major rice price crisis occurred in 1993, which became a national scandal. But today’s CPI has reached nearly double the level of that event.</p>
+
+    <h2>A Mysterious Rice Crisis — and a Political Prince on</h2>
+    <p>Unlike the 1993 crisis—caused by an unusually cold summer—this time, the cause of the soaring rice prices remains unclear. Some speculate that wholesalers are hoarding rice; others suggest that government statistics on rice harvests may be flawed.</p>
+  </div>
+
   <div class="scrolly">
-    <div class="sticky-graphic">
-      <iframe title="The Consumer Price Index over the past 35 years" aria-label="Interactive line chart" id="datawrapper-chart-iZVPG" src="https://datawrapper.dwcdn.net/iZVPG/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="568" data-external="1"></iframe>
+    <div class="sticky-graphic graphic-container">
+      <img id="shinjiro-photo" src="shinjiro.jpeg" alt="Shinjiro Koizumi">
     </div>
-    <div class="step">
-      The last major rice price crisis occurred in 1993, which became a national scandal. But today’s CPI has reached nearly double the level of that event.
+    <div class="scroll-text">
+      <div class="step" data-step="1">
+        <p>To tackle the crisis, the government appointed Shinjiro Koizumi as Minister of Agriculture—a move that shocked many</p>
+      </div>
     </div>
   </div>
 
-  <h2>A Mysterious Rice Crisis — and a Political Prince on a Mission</h2>
-  <p>Unlike the 1993 crisis—caused by an unusually cold summer—this time, the cause of the soaring rice prices remains unclear. Some speculate that wholesalers are hoarding rice; others suggest that government statistics on rice harvests may be flawed.</p>
-  <img src="shinjiro.jpeg" alt="Shinjiro Koizumi" />
+  <div class="container">
+    <p>Koizumi quickly implemented an emergency policy of releasing government rice stockpiles directly to retailers at discounted prices. The strategy worked as a short-term fix. Koizumi, the son of a legendary former prime minister and <b>often dubbed Japan’s political “prince,”</b> is a household name. His actions have dominated headlines across Japan.</p>
+    <p>One of Koizumi’s most controversial moves was to scrap the long-standing Crop Condition Index (CCI), a government statistic published annually for over 70 years. The CCI was designed to quantify the year’s rice crop conditions using 100 as the average baseline.</p>
+    <p>Koizumi claimed that due to climate change and other factors, the index no longer reflected reality. While some supported the decision, others saw it as politically motivated.</p>
+    <h2>A Broken Yardstick? What Data Say About the Rice Index</h2>
+    <p><b>But was the index truly useless?</b> Let’s take a look at the actual data. The red line traces Japan’s official Crop Condition Index.</p>
+  </div>
+
   <div class="scrolly">
-    <div class="step">
-      To tackle the crisis, the government appointed Shinjiro Koizumi as Minister of Agriculture—a move that shocked many.
+    <div class="sticky-graphic graphic-container">
+      <img id="section3-image" src="CCI_HV1@2x.png" alt="Graph">
+    </div>
+    <div class="scroll-text">
+      <div class="step" data-step="2">
+        <p>While it fluctuated during the volatile 1990s, the index has appeared more stable since the mid-2000s.</p>
+      </div>
+      <div class="step" data-step="3">
+        <p>In contrast, the blue bars represent harvest volumes. Until 2006, the two metrics seemed in sync, but afterward the relationship broke down. For the last 20 years, the index has not meaningfully reflected actual changes in output.</p>
+      </div>
     </div>
   </div>
-  <p>Koizumi quickly implemented an emergency policy of releasing government rice stockpiles directly to retailers at discounted prices. The strategy worked as a short-term fix. Koizumi, the son of a legendary former prime minister and <strong>often dubbed Japan’s political “prince,”</strong> is a household name. His actions have dominated headlines across Japan.</p>
-  <p>One of Koizumi’s most controversial moves was to scrap the long-standing Crop Condition Index (CCI), a government statistic published annually for over 70 years. The CCI was designed to quantify the year’s rice crop conditions using 100 as the average baseline.</p>
-  <p>Koizumi claimed that due to climate change and other factors, the index no longer reflected reality. While some supported the decision, others saw it as politically motivated.</p>
-  <p><strong>But was the index truly useless?</strong> Let’s take a look at the actual data.</p>
 
-  <h2>A Broken Yardstick? What Data Say About the Rice Index</h2>
-  <img src="CCI_HV1@2x.png" alt="Graph 1" />
-  <div class="step">
-    The red line traces Japan’s official Crop Condition Index. While it fluctuated during the volatile 1990s, the index has appeared more stable since the mid-2000s.
-  </div>
-  <img src="CCI_HV2@2x.png" alt="Graph 2" />
-  <div class="step">
-    In contrast, the blue bars represent harvest volumes. Until 2006, the two metrics seemed in sync, but afterward the relationship broke down. For the <strong>last 20 years, the index has not meaningfully reflected actual changes in output.</strong>
+  <div class="container">
+    <h2>Visualizing Price and Condition</h2>
+    <p>This scatterplot shows the rice crop index on the X-axis and the consumer price index (CPI) for rice on the Y-axis, with the color and size of each bubble representing the total rice harvest for that year.</p>
   </div>
 
-  <h2>Visualizing Price and Condition</h2>
-  <p>This scatterplot shows the rice crop index on the X-axis and the consumer price index (CPI) for rice on the Y-axis, with the color and size of each bubble representing the total rice harvest for that year.</p>
-  <img src="Scatter_01.png" alt="Scatter 1" />
-  <div class="step">
-    At a glance, there appears to be no significant correlation between the crop index and the consumer price index.
-  </div>
-  <img src="Scatter_02.png" alt="Scatter 2" />
-  <div class="step">
-    If good harvests led to lower prices and poor harvests led to higher prices, we would expect most of the data points to fall within the shaded gray zone. However, that pattern is not observed.
-  </div>
-  <img src="Scatter_03.png" alt="Scatter 3" />
-  <div class="step">
-    In fact, one year stands out in particular: 2024, where the CPI rose sharply to 123, despite the crop index being a relatively average 101. This diverges notably from the trend seen in other years with similar crop index values (100–102), suggesting that 2024 was an outlier in terms of how prices responded to harvest conditions.
+  <div class="scrolly">
+    <div class="sticky-graphic graphic-container">
+      <img id="section4-image" src="Scatter_01.png" alt="Scatterplot">
+    </div>
+    <div class="scroll-text">
+      <div class="step" data-step="4">
+        <p>At a glance, there appears to be no significant correlation between the crop index and the consumer price index.</p>
+      </div>
+      <div class="step" data-step="5">
+        <p>If good harvests led to lower prices and poor harvests led to higher prices, we would expect most of the data points to fall within the shaded gray zone. However, that pattern is not observed.</p>
+      </div>
+      <div class="step" data-step="6">
+        <p>In fact, one year stands out in particular: 2024, where the CPI rose sharply to 123, despite the crop index being a relatively average 101. This diverges notably from the trend seen in other years with similar crop index values (100–102), suggesting that 2024 was an outlier in terms of how prices responded to harvest conditions.</p>
+      </div>
+    </div>
   </div>
 
-  <p>These findings support the hypothesis that the CCI had lost touch with the reality of harvest volumes, pricing, and possibly distribution. This aligns with what field experts have sensed and what the government’s decision suggests. Why the index diverged from reality remains a topic of debate—a question best left for future inquiry.</p>
+  <div class="container">
+    <p>These findings support the hypothesis that the CCI had lost touch with the reality of harvest volumes, pricing, and possibly distribution. This aligns with what field experts have sensed and what the government’s decision suggests. Why the index diverged from reality remains a topic of debate—a question best left for future inquiry.</p>
+  </div>
 
   <div class="footer">
     <p><a href="https://github.com/KenshoKuremoto/Lede_Proect1_CCI" target="_blank">Here is the link to Github page</a></p>
   </div>
 
+  <script src="https://unpkg.com/scrollama"></script>
   <script>
-    window.addEventListener("message", function(event) {
-      if (event.data["datawrapper-height"]) {
-        var iframes = document.querySelectorAll("iframe");
-        for (var chartId in event.data["datawrapper-height"]) {
-          for (var i = 0; i < iframes.length; i++) {
-            if (iframes[i].contentWindow === event.source) {
-              iframes[i].style.height = event.data["datawrapper-height"][chartId] + "px";
-            }
-          }
-        }
-      }
-    });
+    const section3Img = document.getElementById("section3-image");
+    const section4Img = document.getElementById("section4-image");
+
+    scrollama()
+      .setup({ step: ".step", offset: 0.5 })
+      .onStepEnter(response => {
+        const step = response.element.getAttribute("data-step");
+        if (step === "3") section3Img.src = "CCI_HV2@2x.png";
+        else if (step === "4") section4Img.src = "Scatter_01.png";
+        else if (step === "5") section4Img.src = "Scatter_02.png";
+        else if (step === "6") section4Img.src = "Scatter_03.png";
+      });
   </script>
 </body>
 </html>
